@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//Codeforces 231A
 int main()
 {
     //Declare variables for problem & input handling

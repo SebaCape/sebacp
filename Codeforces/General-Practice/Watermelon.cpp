@@ -1,5 +1,6 @@
 #include <iostream>
 
+//Codeforces 4A
 int main()
 {   
     int weight;

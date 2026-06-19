@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//Codeforces 546A
 int main()
 {
     //Input handling and initialization
