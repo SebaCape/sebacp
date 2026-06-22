@@ -1,4 +1,4 @@
-//USACO 2016 | Bronze Division | Promotion Counting
+//USACO 2020 | Bronze Division | Do You Know Your ABCs?
 #include <iostream>
 #include <fstream>
 #include <algorithm>
