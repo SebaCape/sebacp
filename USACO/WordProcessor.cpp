@@ -39,8 +39,6 @@ int main()
         //Done regardless; word flushed to same line if possible, otherwise we are on the next line
         fout << cur_word;
         line_size -= cur_word.length(); //Minus extra character for whitespace
-
-        
     }
 
     return 0;
