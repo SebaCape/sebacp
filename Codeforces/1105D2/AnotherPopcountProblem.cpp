@@ -9,18 +9,18 @@ int main()
 {
     /*
         We want to find the best way to split a number such that it has as many bits as possible.
-        This can be achieved greedily by summing the number with the greatest powers of 2 that
-        it bounds above minus 1, and then using the remainder when necessary. Note that if a number
+        This can be achieved greedily by summing the number using the greatest powers 2^k - 1 that
+        it bounds above, and then using the remainder when necessary. Note that if a number
         is greater than our input divided by the amount of partitions left, then we cannot use it.
     */
     int input_len;
     cin >> input_len;
-    set<int> two_pows; //Keep set of powers of two - 1
+    set<long long> two_pows; //Keep set of powers of two - 1
 
     //Populate set
     for(int i{1}; i < 32; i++)
     {
-        two_pows.insert(static_cast<long long>(pow(2, i) - 1));
+        two_pows.insert(pow(2, i) - 1);
     }
 
     while(input_len--)
@@ -38,7 +38,7 @@ int main()
 
         while(partitions > 0)
         {
-            //Get best element <= num / partitions of powers set to figure best number to use
+            //Get best element (number before value that bounds above our value)
             long long best_num = *prev(two_pows.upper_bound(num / partitions));
 
             //Increment bit count accordingly and update inputs
