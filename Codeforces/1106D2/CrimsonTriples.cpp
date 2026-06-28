@@ -11,7 +11,9 @@ int main()
         integers a, b, and c such that 1 <= a, b, c <= n, and that gcd(lcm(a,b),lcm(b,c)) = gcd(a,c).
         We know that  gcd(lcm(a,b),lcm(b,c)) = lcm(b, gcd(a, c)) due to distribution of least common 
         multiples. We can represent the possible values of b using the sequence that sums all numbers
-        (n / i)^2 where i starts at 1.
+        (n / i)^2 where i starts at 1. This is because there are [n / x] multiples of any integer x
+        in the range from 1 to n, and b must divide a and c, so we can calculate all of these possible
+        valid multiples as such.
     */
 
     int input_len;
